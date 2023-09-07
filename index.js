@@ -12,7 +12,9 @@ const manualNav = (manual) => {
     btns[manual].classList.add('active');
 
     // Add animation class to the active slide
-    slides[manual].querySelector('.info').classList.add('animate');
+    slides[manual].querySelector('.info')?.classList?.add('animate');
+    slides[manual].querySelector('.video-slide-4')?.classList?.add('video');
+    slides[manual].querySelector('.box-container')?.classList?.add('box-animation');
 
     console.log(manual);
 };
@@ -32,12 +34,15 @@ let repeat = () => {
             slides[i].classList.remove('active');
             btns[i].classList.remove('active');
             slides[i].querySelector('.info')?.classList?.remove('animate');
-
+            slides[i].querySelector('.video-slide-4')?.classList?.remove('video');
+            slides[i].querySelector('.box-container')?.classList?.remove('box-animation');
             i = (i + 1) % slides.length;
 
             slides[i].classList.add('active');
             btns[i].classList.add('active');
-            slides[i].querySelector('.info').classList.add('animate');
+            slides[i].querySelector('.info')?.classList?.add('animate');
+            slides[i].querySelector('.video-slide-4')?.classList?.add('video');
+            slides[i].querySelector('.box-container')?.classList?.add('box-animation');
 
             repeater();
         }, 9000);

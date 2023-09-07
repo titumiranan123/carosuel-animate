@@ -2,22 +2,44 @@ body {
     display: flex;
     justify-content: center;
     justify-items: center;
+    color: white;
 }
 
 .slider {
-    height: 400px;
-    width: 900px;
+    height: 600px;
+    width: 1200px;
     overflow: hidden;
     position: relative;
 }
 
 .myslider img {
-    height: 400px;
-    width: 900px;
+    height: 600px;
+    width: 100%;
     z-index: -1;
 }
 
 .img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide:nth-child(2) {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: polygon(0 51%, 1% 1%, 2% 51%, 0% 100%);
+}
+
+.img-slider .slide:nth-child(3) {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 90%);
+}
+
+.img-slider .slide:nth-child(4) {
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -32,7 +54,7 @@ body {
 
 .myslider .info {
     position: absolute;
-    top: 40%;
+    top: 25%;
     z-index: 1;
     left: 10%;
 }
@@ -68,6 +90,24 @@ body {
     animation: moveDown 1s ease-in-out forwards;
 }
 
+/* /slide -4 */
+.video-slide-4 {
+    position: absolute;
+    top: 20%;
+    right: 120px;
+
+}
+
+.video {
+    -webkit-animation-name: moveDown;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: moveDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
 
 /* .box-animate {} */
 
@@ -150,6 +190,26 @@ body {
     }
 }
 
+@keyframes slideright {
+    0% {
+        transform: -translateX(-1000%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideright {
+    0% {
+        transform: -translateX(-1000%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .animate {
     -webkit-animation-name: slideLeft;
     -webkit-animation-duration: 2s;
@@ -160,4 +220,37 @@ body {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 
+}
+
+/* slide 3 style  */
+
+
+
+.box-animation {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    z-index: 7;
+    animation: slide-up 1s ease-out;
+    /* Apply the animation */
+}
+
+/* Define the keyframes for the animation */
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        /* Start from the bottom */
+    }
+
+    to {
+        transform: translateY(0);
+        /* Move up to its original position */
+    }
+}
+
+.box {
+    height: 220px;
+    width: 150px;
 }

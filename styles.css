@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.slider {
+    height: 400px;
+    width: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+.myslider img {
+    height: 400px;
+    width: 900px;
+    z-index: -1;
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active {
+    clip-path: circle(150% at 0 49%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+
+.myslider .info {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    left: 10%;
+}
+
+.img-slider .navigation .active {
+    width: 24px;
+
+
+}
+
+/* first slide box style  */
+
+
+.card-slider {
+    width: 300px;
+    overflow: hidden;
+    /* animation: moveDown 1s ease-in-out forwards; */
+
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    background: red;
+    position: absolute;
+    top: 40%;
+    right: 155px;
+    opacity: 0;
+}
+
+.card.active {
+    opacity: 1;
+    animation: moveDown 1s ease-in-out forwards;
+}
+
+
+/* .box-animate {} */
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-1000%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+}
+
+/* next/previous btn  */
+
+.prev,
+.next {
+    color: #c71919;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 12px;
+    cursor: pointer;
+    transform: 0.2s;
+    user-select: none;
+    z-index: 5;
+}
+
+/* btn  */
+.prev:hover,
+.next:hover {
+    color: #3498db;
+}
+
+.next {
+    right: 0;
+}
+
+/* dot style  */
+.dotbox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    z-index: 4;
+
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #1a0202;
+    margin-top: 20px;
+    border-radius: 50%;
+
+
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-1000%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    0% {
+        transform: translateX(-1000%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate {
+    -webkit-animation-name: slideLeft;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: slideLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .info p {
+            background: rgba(146, 144, 146, 0.5);
+            padding: 4px, 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider img-slider">
+        <div class="myslider slide active">
+            <img src="./doctor.jpg" alt="">
+            <div class="info animate" id="info">
+                <h1>We welcome Challenge</h1>
+                <p>specialised bespok solution </p>
+                <p>Helping every sector Across the world</p>
+                <p>Tailormade solution that best fits clients need</p>
+            </div>
+            <div class="box card-slider">
+                <div class="card active">
+                    <h2>Card 1</h2>
+                    <p>This is the content of Card 1.</p>
+                </div>
+                <div class="card">
+                    <h2>Card 2</h2>
+                    <p>This is the content of Card 2.</p>
+                </div>
+                <div class="card">
+                    <h2>Card 3</h2>
+                    <p>This is the content of Card 3.</p>
+                </div>
+            </div>
+        </div>
+        <div class="myslider  slide">
+            <img src="./doctor1.jpg" alt="">
+            <div class="info">
+                <h1></h1>
+                slide-2
+            </div>
+        </div>
+        <div class="myslider slide">
+            <img src="./doctor2.jpg" alt="">
+            <div class="info">
+                slide-3
+            </div>
+        </div>
+        <div class="myslider slide">
+            <img src="./doctor1.jpg" alt="">
+            <div class="info">
+                slide-4
+            </div>
+        </div>
+        <a id="prev" class="prev">&#10094</a>
+        <a id="next" class="next">&#10095</a>
+        <div class="dotbox navigation" style="text-align:center">
+            <span class="dot btn active"></span>
+            <span class="dot btn"></span>
+            <span class="dot btn"></span>
+            <span class="dot btn"></span>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+    <script src="./cardslider.js"></script>
+
+</body>
+
+</html>

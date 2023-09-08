@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     display: flex;
     justify-content: center;
@@ -5,6 +6,7 @@ body {
     color: white;
 }
 
+/* Slider container */
 .slider {
     height: 600px;
     width: 1200px;
@@ -12,12 +14,14 @@ body {
     position: relative;
 }
 
+/* Slider images */
 .myslider img {
     height: 600px;
     width: 100%;
     z-index: -1;
 }
 
+/* Individual slides */
 .img-slider .slide {
     z-index: 1;
     position: absolute;
@@ -46,71 +50,27 @@ body {
     clip-path: circle(0% at 0 50%);
 }
 
+/* Active slide */
 .img-slider .slide.active {
     clip-path: circle(150% at 0 49%);
     transition: 2s;
     transition-property: clip-path;
 }
 
+/* Slide info */
 .myslider .info {
     position: absolute;
     top: 25%;
-    z-index: 1;
+    z-index: 2;
     left: 10%;
 }
 
+/* Slide navigation */
 .img-slider .navigation .active {
     width: 24px;
-
-
 }
 
-/* first slide box style  */
-
-
-.card-slider {
-    width: 300px;
-    overflow: hidden;
-    /* animation: moveDown 1s ease-in-out forwards; */
-
-}
-
-.card {
-    height: 200px;
-    width: 200px;
-    background: red;
-    position: absolute;
-    top: 40%;
-    right: 155px;
-    opacity: 0;
-}
-
-.card.active {
-    opacity: 1;
-    animation: moveDown 1s ease-in-out forwards;
-}
-
-/* /slide -4 */
-.video-slide-4 {
-    position: absolute;
-    top: 20%;
-    right: 120px;
-
-}
-
-.video {
-    -webkit-animation-name: moveDown;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    animation-name: moveDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: backwards;
-}
-
-/* .box-animate {} */
-
+/* Slide animation keyframes */
 @keyframes moveDown {
     0% {
         transform: translateY(-1000%);
@@ -123,8 +83,7 @@ body {
     }
 }
 
-/* next/previous btn  */
-
+/* Previous and Next buttons */
 .prev,
 .next {
     color: #c71919;
@@ -139,7 +98,7 @@ body {
     z-index: 5;
 }
 
-/* btn  */
+/* Button hover */
 .prev:hover,
 .next:hover {
     color: #3498db;
@@ -149,14 +108,13 @@ body {
     right: 0;
 }
 
-/* dot style  */
+/* Slide navigation dots */
 .dotbox {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     bottom: 0;
     z-index: 4;
-
 }
 
 .dot {
@@ -166,10 +124,9 @@ body {
     border: 3px solid #1a0202;
     margin-top: 20px;
     border-radius: 50%;
-
-
 }
 
+/* Slide animations */
 @keyframes slideLeft {
     0% {
         transform: translateX(-1000%);
@@ -210,6 +167,7 @@ body {
     }
 }
 
+/* Slide animation classes */
 .animate {
     -webkit-animation-name: slideLeft;
     -webkit-animation-duration: 2s;
@@ -219,13 +177,9 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-
 }
 
-/* slide 3 style  */
-
-
-
+/* Slide 3 animation */
 .box-animation {
     display: flex;
     gap: 10px;
@@ -234,28 +188,26 @@ body {
     left: 200px;
     z-index: 7;
     animation: slide-up 1s ease-out;
-    /* Apply the animation */
 }
 
-/* Define the keyframes for the animation */
+/* Slide 3 animation keyframes */
 @keyframes slide-up {
     from {
         transform: translateY(100%);
-        /* Start from the bottom */
     }
 
     to {
         transform: translateY(0);
-        /* Move up to its original position */
     }
 }
 
+/* Individual box style */
 .box {
     height: 220px;
     width: 150px;
 }
 
-/* slide-3  */
+/* Slide-3 image style */
 .slide-3-img {
     position: absolute;
     top: -111px;
@@ -263,22 +215,99 @@ body {
     z-index: 10;
     height: 20px;
     width: 20px;
-
-    /* Set a higher z-index value to place it above the boxes */
 }
 
+/* Slide-3 image animation */
 .slide-3-img-animate {
-    animation: rotated 1s ease-in;
+    animation: rotated 1.5s ease-in;
 }
 
+/* Slide-3 image animation keyframes */
 @keyframes rotated {
     from {
         transform: rotate(-90deg);
-        /* Start from the bottom */
     }
 
     to {
         transform: rotate(0deg);
-        /* Move up to its original position */
+    }
+}
+
+/* Slide-2 style */
+.logo-container {
+    position: absolute;
+    left: 30%;
+    top: 45%;
+    transform: scale(1);
+    transition: zoomin 0.8s ease;
+}
+
+.logo img {
+    transition: rotated 0.5 ease-in-out;
+}
+
+/* Slide-2 animation keyframes */
+@keyframes zoomin {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* card slider  */
+
+.card-slider {
+    width: 300px;
+    overflow: hidden;
+    /* animation: moveDown 1s ease-in-out forwards; */
+
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    background: red;
+    position: absolute;
+    top: 30%;
+    right: 155px;
+    opacity: 0;
+}
+
+.card.active {
+    opacity: 1;
+    animation: moveDown 1s ease-in-out forwards;
+}
+
+/* /slide -4 */
+.video-slide-4 {
+    position: absolute;
+    top: 20%;
+    right: 120px;
+
+}
+
+.video {
+    -webkit-animation-name: moveDown;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: moveDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-1000%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10%);
+        opacity: 1;
     }
 }

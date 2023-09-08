@@ -15,8 +15,10 @@ const manualNav = (manual) => {
     slides[manual].querySelector('.info')?.classList?.add('animate');
     slides[manual].querySelector('.video-slide-4')?.classList?.add('video');
     slides[manual].querySelector('.box-container')?.classList?.add('box-animation');
+    slides[manual].querySelector('.box-container')?.querySelector('.box')?.querySelector('.slide-3-img')?.classList?.add('slide-3-img-animate');
+    const img = slides[manual].querySelector('.box-container')?.querySelector('.box')?.querySelector('.slide-3-img')
 
-    console.log(manual);
+    console.log(img);
 };
 
 btns.forEach((btn, i) => {
@@ -43,6 +45,7 @@ let repeat = () => {
             slides[i].querySelector('.info')?.classList?.add('animate');
             slides[i].querySelector('.video-slide-4')?.classList?.add('video');
             slides[i].querySelector('.box-container')?.classList?.add('box-animation');
+            slides[i].querySelector('.box-container')?.querySelector('.box')?.querySelector('.slide-3-img')?.classList?.add('slide-3-img-animate');
 
             repeater();
         }, 9000);

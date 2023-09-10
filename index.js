@@ -28,6 +28,7 @@ const manualNav = (manual) => {
 
     // Add animation class to the active slide
     slides[manual].querySelector('.info')?.classList?.add('animate');
+    slides[manual].querySelector('.heading')?.classList?.add('slide-2-animation');
     slides[manual].querySelector('.video-slide-4')?.classList?.add('video');
     slides[manual].querySelector('.box-container')?.classList?.add('box-animation');
 
@@ -65,6 +66,8 @@ let repeat = () => {
             slides[i].classList.remove('active');
             btns[i].classList.remove('active');
             slides[i].querySelector('.info')?.classList?.remove('animate');
+            slides[i].querySelector('.heading')?.classList?.remove('slide-2-animation');
+            // console.log(slides[i].querySelector('.heading'))
             slides[i].querySelector('.video-slide-4')?.classList?.remove('video');
             slides[i].querySelector('.box-container')?.classList?.remove('box-animation');
 
@@ -79,6 +82,7 @@ let repeat = () => {
             slides[i].classList.add('active');
             btns[i].classList.add('active');
             slides[i].querySelector('.info')?.classList?.add('animate');
+            slides[i].querySelector('.heading')?.classList?.add('slide-2-animation');
             slides[i].querySelector('.video-slide-4')?.classList?.add('video');
             slides[i].querySelector('.box-container')?.classList?.add('box-animation');
 

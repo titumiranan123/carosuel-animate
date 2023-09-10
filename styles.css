@@ -311,3 +311,20 @@ body {
         opacity: 1;
     }
 }
+
+/* slide-2 animation  */
+@keyframes slideRightToLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Apply the animation to the .box class */
+.slide-2-animation {
+    animation: slideRightToLeft 1s ease-in-out;
+    /* Adjust the duration and timing function as needed */
+}
